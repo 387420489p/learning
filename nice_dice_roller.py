@@ -51,7 +51,7 @@ def roll():
         number = random.randint(1, int(dice))
         total += number
         print(number, end=" ")
-    print(f"\nTotal: {total}")
+    print(f"\nTotal: {total} Average: {total/count}")
     again = input("Roll again?")
     if again =="yes" or again == "y" or again == "Y" or again == "Yes":
         roll()
