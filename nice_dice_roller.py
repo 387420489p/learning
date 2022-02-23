@@ -9,7 +9,7 @@ def roll():
     if dice == "2" or dice == "4" or dice == "6" or dice == "8" or dice == "10" or dice == "12" or dice == "20" or dice == "100":
         count = int(input("How many dices dou you want to roll? "))
     elif dice == "69":
-        print("Hehe NICE")
+        print("Heh NICE")
         roll()
     elif dice == "420":
         print("420 Blaze it!")
