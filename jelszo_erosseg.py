@@ -7,23 +7,49 @@
 #Ha a jelszó tartalmazza a jelszo vagy az 123 részszöveget, akkor automatikusan 0 erős
 #Ha a jelszó 0 karakter hosszú, akkor szintén automatikusan 0 erős.
 
-def jelszo_erosseg(jelszo):
+def jelszo_erosseg():
+    jelszo = input("Jelszó: ")
     erosseg = 1
 
-    if "jelszo" in jelszo or "123" in jelszo or len(jelszo) == 0:
+    if "jelszo" in jelszo or "123" in jelszo or len(jelszo) == 0 or "password" in jelszo:
         return 0
 
     if len(jelszo) >= 5:
         erosseg += 1
     if len(jelszo) >= 8:
         erosseg += 2
+    if len(jelszo) >= 12:
+        erosseg += 2
+    if jelszo.islower() == False:
+        erosseg += 2
 
-    erosseg += jelszo.count("_") *2
-    erosseg += jelszo.count("-") *2
-    erosseg += jelszo.count(".") *2
+    erosseg += jelszo.count("_") * 2
+    erosseg += jelszo.count("-") * 2
+    erosseg += jelszo.count(".") * 2
+    erosseg += jelszo.count("#") * 2
+    erosseg += jelszo.count("+") * 2
+    erosseg += jelszo.count("!") * 2
+    erosseg += jelszo.count("?") * 2
+    erosseg += jelszo.count("'") * 2
+    erosseg += jelszo.count("\"") * 2
+    erosseg += jelszo.count("/") * 2
+    erosseg += jelszo.count("=") * 2
+    erosseg += jelszo.count("(") * 2
+    erosseg += jelszo.count(")") * 2
+    erosseg += jelszo.count(",") * 2
+    erosseg += jelszo.count("<") * 2
+    erosseg += jelszo.count(">") * 2
+    erosseg += jelszo.count("%") * 2
+    erosseg += jelszo.count("&") * 2
+    erosseg += jelszo.count("@") * 2
+    erosseg += jelszo.count("{") * 2
+    erosseg += jelszo.count("}") * 2
+    erosseg += jelszo.count(";") * 2
+    erosseg += jelszo.count(":") * 2
+    erosseg += jelszo.count("*") * 2
+    erosseg += jelszo.count("~") * 2
 
     print("Jelszó: " + jelszo)
-    print(f"Erőssége: ", {erosseg})
+    print(f"Erőssége:  {erosseg}\n0:Nagyon gyenge\n1-4:Gyenge\n5-6:Normál\n5-7:Erős\n7+: Nagyon erős")
     return erosseg
 
-jelszo_erosseg(input("Jelszó???????? "))

@@ -1,11 +1,9 @@
-def leghosszabb_szo(szoveg):
+def leghosszabb_szo():
+    szoveg = input("Type your text here to find the longest word in it! \n")
     szavak = szoveg.split(" ")
-    leghosszabb = ("")
+    leghosszabb = ""
     for szo in szavak:
         if len(szo) > len(leghosszabb):
            leghosszabb = szo
-    return leghosszabb
 
-
-text = input("Type your text here to find the longest word in it! \n")
-print(leghosszabb_szo(text))
+    print(f"Leghosszabb szó: {leghosszabb}")
