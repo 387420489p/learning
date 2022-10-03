@@ -1,0 +1,11 @@
+question_number,city,guess_country,actual_country,correct
+1,Badarganj,India,Bangladesh,False
+2,Sprockhövel,Germany,Germany,True
+3,Alblasserdam,Netherlands,Netherlands,True
+4,Numata,Romania,Japan,False
+5,Nanganga,Sudan,Tanzania,False
+6,Preetz,Germany,Germany,True
+7,Sheksna,Philippines,Russia,False
+8,Conde,Botswana,Brazil,False
+9,East Massapequa,United States,United States,True
+10,Tursunzoda,India,Tajikistan,False
